@@ -1,0 +1,32 @@
+<IfModule mod_rewrite.c>
+    #Enable options
+    Options -Indexes +FollowSymLinks
+    #Turn on the write engine
+    RewriteEngine On
+    RewriteBase /
+    #
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+#    RewriteRule ^app$ app.php [QSA,L]
+    #Enforce SSL - HTTPS
+    RewriteCond %{HTTPS} off
+    RewriteRule (.*) https://%{HTTP_POST}%{REQUEST_URI} [L,R=301]
+    #Redirecting from www URLs
+    RewriteRule  ^ - [E=PROTO:https]
+    RewriteCond %{HTTP_POST} ^www\.(.+)$ [NC]
+    RewriteRule ^ %{ENV:PROTO}://%1%{REQUEST_URI} [L,R=301]
+    #Hide page extensions
+    RewriteCond %{THE_REQUEST} /([^.]+)\.php [NC]
+    RewriteRule ^ /%1 [NC,L,R]
+    RewriteCond %{REQUEST_FILENAME}.php -f
+    RewriteRule ^ %{REQUEST_URI}.php [NC,L]
+    #Enforce forward slash
+#    RewriteCond %{REQUEST_URI} !\.(css|js|png|jpg|ttf|woff|woff2)$
+#    RewriteRule (.*[^/])$ %{REQUEST_URI}/ [L,R=301]
+</IfModule>
+<IfModule mod_alias.c>
+</IfModule>
+#Remove Apache-generated Server Information Footer
+ServerSignature Off
+
+#Remove atonalrecords online 10

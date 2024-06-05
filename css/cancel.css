@@ -1,0 +1,61 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 04 May 2021, 9:07:26 AM
+    Author     : Aphiwe
+*/
+
+nav a{color: rgba(128,128,128,1) !important;}
+nav ul a:hover{background-color: rgba(0,0,0,0) !important;}
+
+.navbar-fixed .nav-wrapper .brand-logo .brand-logo-64{height: 64px;}
+.navbar-fixed .nav-wrapper .brand-logo .brand-logo-56{height: 56px;}
+
+.sidenav li a{height: 56px !important; line-height: 56px !important;	color: rgba(128,128,128,1) !important; font-size: 16px !important;}
+.sidenav-active-style{padding-left: 50px !important; border-left: 4px solid rgba(128,128,128,1) !important;}
+.sidenav-li-a-hover-none{pointer-events: none;}
+
+nav.override-position ul{text-align: center;}
+nav.override-position ul li{display: inline; float: none;}
+nav.override-position ul li a{display: inline-block;}
+
+.ui.circular.label{min-width:2em;min-height:2em;padding:.5em!important;line-height:1em;text-align:center;border-radius:500rem;}
+.ui.tiny.label,.ui.tiny.labels .label{font-size:.71428571rem; color: rgba(255,255,255,1); font-weight: bold;}
+.ui.floating.label{position: absolute; z-index:100; top:-1em; left:100%; margin:0 0 0 -1.5em !important;}
+
+.input-field input:focus+label, .materialize-textarea:focus:not([readonly])+label{color: rgba(211,211,211,1) !important;}
+.input-field input:focus, .materialize-textarea:focus:not([readonly]){border-bottom: 1px solid rgba(211,211,211,1) !important; box-shadow: 0 1px 0 0 lightgray !important;}
+.input-field .prefix.active{color: rgba(211,211,211,1);}
+
+main{flex: 1 0 auto;}
+body{display: flex; min-height: 100vh; flex-direction: column;}
+
+#modal-authorization-trigger.btn{border-radius: 50px;}
+#modal-authorization-trigger.btn:hover{background-color: rgba(128,128,128,1) !important;}
+#forgot-password.btn:hover{background-color: rgba(128,128,128,0) !important;}
+
+.bottom{position: absolute; bottom: 0;}
+
+.btn-round{border-radius: 50px;}
+.z-index-5{z-index: 1000;}
+.z-index-4{z-index: 999;}
+
+.list-style-type-square{list-style-type: square;}
+.no-border{border: 0;}
+
+#toast-container{top: auto !important; bottom: 0 !important; left: auto !important; right: 0 !important; min-width: 100%;}
+
+#notification-toast-img{width: 30px !important;}
+#notification-toast-text{position: absolute; float: left; padding-left: 40px;}
+
+@media screen and (max-width: 480px)
+{
+    #notification-toast-img{width: 30px !important;}
+    #notification-toast-text{position: absolute; float: left; padding-left: 40px;}
+    
+    footer{padding-bottom: 56px;}
+}
+        
