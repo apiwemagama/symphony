@@ -30,12 +30,10 @@ $(document).ready(function() {
             wavesurfer.title = $(this).attr("data-title");
             wavesurfer.musician = $(this).attr("data-musician");
             wavesurfer.version = $(this).attr("data-version");
-            wavesurfer.release = $(this).attr("data-release");
+            wavesurfer.date = $(this).attr("data-date");
             wavesurfer.genre = $(this).attr("data-genre");
             
             if(sessionStorage.getItem("session") !== null){
-               
-
                 wavesurfer.load(wavesurfer.song);
 
                 cue = $(this).closest('tr').index();
@@ -50,7 +48,7 @@ $(document).ready(function() {
                         $("#lg-title").html(wavesurfer.title);
                         $("#lg-musician").html(wavesurfer.musician);
                         $("#lg-version").html(wavesurfer.version);
-                        $("#lg-release").html(" &#183; "+formatDate(wavesurfer.release));
+                        $("#lg-date").html(" &#183; "+formatDate(wavesurfer.date));
                         $("#lg-genre").html(" &#183; "+wavesurfer.genre);
                         $("#lg-duration").html(" &#183; "+formatDuration(wavesurfer.getDuration()));
 
@@ -98,12 +96,13 @@ $(document).ready(function() {
                 });
                 wavesurfer.on('audioprocess', function() {
                     if(wavesurfer.isPlaying()) {
-                        $("#lg-remaining").html(" &#183; "+formatCurrentTime(wavesurfer.getCurrentTime()));
+                        $("#lg-remaining").html(formatCurrentTime(wavesurfer.getCurrentTime()));
                     }
                 });
             }
             else
             {
+                
                 $.viewport = $(window).width();
                 
                 if($.viewport > 600)

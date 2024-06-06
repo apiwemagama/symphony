@@ -10,12 +10,12 @@ $(document).ready(function() {
 
         var session = sessionStorage.getItem('session');
 
-        var itemID = $(this).attr("data-id");
+        var itemCatalog = $(this).attr("data-catalog");
         var itemArtwork = $(this).attr("data-artwork");
         var itemTitle = $(this).attr("data-title");
         var itemMusician = $(this).attr("data-musician");
         
-        console.log(itemID+" "+session);
+        console.log(itemCatalog+" "+session);
         
         if(session !== null)
         {
@@ -26,7 +26,7 @@ $(document).ready(function() {
                 crossDomain: true,
                 method: 'GET',
                 url: '../secure/service/add-to-cart.php',
-                data: {session: session, itemID: itemID},
+                data: {session: session, itemCatalog: itemCatalog},
                 dataType: 'JSON',
                 success: function(result){
                     if(result.response === 'return')

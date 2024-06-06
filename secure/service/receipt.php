@@ -18,12 +18,12 @@ $result = mysqli_query($link, $query);
 
 if($result)
 {
-    $query = "INSERT INTO library(receiptReference, accountSession, itemCatalog) SELECT '$reference', accountSession, itemID FROM cart WHERE accountSession LIKE '$session'";
+    $query = "INSERT INTO library(receiptReference, accountSession, itemCatalog) SELECT '$reference', accountSession, itemCatalog FROM cart WHERE accountSession LIKE '$session'";
     $result = mysqli_query($link, $query);
     
     if($result)
     {
-//        $query = "SELECT * FROM library INNER JOIN item ON libary.itemID LIKE item.catalog WHERE library.receiptReference LIKE '$reference' AND library.accountSession LIKE '$session'";
+//        $query = "SELECT * FROM library INNER JOIN item ON libary.itemCatalof LIKE item.catalog WHERE library.receiptReference LIKE '$reference' AND library.accountSession LIKE '$session'";
 //        $result = mysqli_query($link, $query);
 //        
 //        if($result)

@@ -10,7 +10,7 @@ $(document).ready(function() {
         e.preventDefault();
 
         var session = sessionStorage.getItem('session');
-        var itemID = $(this).attr("data-item-id");
+        var itemCatalog = $(this).attr("data-item-catalog");
 
         $.ajax({
             async: true,
@@ -19,7 +19,7 @@ $(document).ready(function() {
             crossDomain: true,
             method: 'GET',
             url: '../secure/service/remove-from-cart',
-            data: {session: session, itemID: itemID},
+            data: {session: session, itemCatalog: itemCatalog},
             success: function(response){
                 if(response === 'success')
                 {

@@ -6,9 +6,9 @@ include("../../config/database/connection.php");
 if(isset($_SESSION['session']))
 {    
     $session = $_GET['session'];
-    $itemID = $_GET['itemID'];
+    $itemCatalog = $_GET['itemCatalog'];
 
-    $query = "SELECT itemID FROM cart WHERE accountSession LIKE '$session' AND itemID LIKE '$itemID'";
+    $query = "SELECT itemCatalog FROM cart WHERE accountSession LIKE '$session' AND itemCatalog LIKE '$itemCatalog'";
     $result = mysqli_query($link, $query);
 
     if($result)
@@ -20,7 +20,7 @@ if(isset($_SESSION['session']))
         }
         else
         {
-            $query = "INSERT INTO cart(accountSession, itemID) SELECT '$session', catalog FROM item WHERE catalog LIKE '$itemID'";
+            $query = "INSERT INTO cart(accountSession, itemCatalog) SELECT '$session', catalog FROM item WHERE catalog LIKE '$itemCatalog'";
             $result = mysqli_query($link,$query);
 
             if($result)

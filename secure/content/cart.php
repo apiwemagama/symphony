@@ -64,7 +64,7 @@
 
                     date = date.toLocaleDateString('en-US', options);
 
-                    $(".column").append("<div class='row'><div class='col s11 l12'><div id='card-item' class='card horizontal z-depth-0'><div class='card-image'><img src='../uploads/artwork/"+value.artwork+"'></div><div class='pin-absolute'><button id='btn-remove-from-cart' class='btn btn-remove-from-cart btn-floating btn-flat btn-opacity waves-effect white-text' data-item-id='"+value.itemID+"'><i class='material-icons'>close</i></button></div><div class='card-stacked'><div class='card-content'><p>"+value.title+"</p><p><b>"+value.version+"</b></p><p style='white-space: nowrap; width: 100%; overflow: hidden; text-overflow: cut;'>"+value.musician+"</p><p>R"+value.price+"</p><blockquote><p><b>Album</b>\n"+value.album+"</p><p><b>Release</b>\n"+date+"</p><p><b>Genre</b>\n"+value.category+"</p><p><b>Sub-genre</b>\n"+value.style+"</p></blockquote></div></div></div></div></div>");
+                    $(".column").append("<div class='row'><div class='col s11 l12'><div id='card-item' class='card horizontal z-depth-0'><div class='card-image'><img src='../uploads/artwork/"+value.artwork+"'></div><div class='pin-absolute'><button id='btn-remove-from-cart' class='btn btn-remove-from-cart btn-floating btn-flat btn-opacity waves-effect white-text' data-item-catalog='"+value.itemCatalog+"'><i class='material-icons'>close</i></button></div><div class='card-stacked'><div class='card-content'><p>"+value.title+"</p><p><b>"+value.version+"</b></p><p style='white-space: nowrap; width: 100%; overflow: hidden; text-overflow: cut;'>"+value.musician+"</p><p>R"+value.price+"</p><blockquote><p><b>Album</b>\n"+value.album+"</p><p><b>Release</b>\n"+date+"</p><p><b>Genre</b>\n"+value.category+"</p><p><b>Sub-genre</b>\n"+value.style+"</p></blockquote></div></div></div></div></div>");
                 });
             },
             error: function(){
@@ -82,7 +82,7 @@
                 });
             },
             error: function(){
-                console.error("There was an error passing over data");
+                console.error("There was an error passing over subtotal");
             }
         });
 
@@ -100,7 +100,7 @@
                 });
             },
             error: function(){
-                console.error("There was an error passing over data");
+                console.error("There was an error passing over grandtotal");
             }
         });
 

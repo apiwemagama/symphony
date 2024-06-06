@@ -8,9 +8,9 @@
 include("../../config/database/connection.php");
 
 $session = $_GET['session'];
-$itemID = $_GET['itemID'];
+$itemCatalog = $_GET['itemCatalog'];
 
-$query = "DELETE FROM cart WHERE accountSession = '$session' AND itemID = '$itemID'";
+$query = "DELETE FROM cart WHERE accountSession = '$session' AND itemCatalog = '$itemCatalog'";
 $result = mysqli_query($link, $query);
 
 if($result)

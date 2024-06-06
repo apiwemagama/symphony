@@ -64,7 +64,7 @@ and open the template in the editor.
                     <div class="metadata">
                         <span id='lg-title' class="grey-text text-darken-1"></span><br>
                         <span id='lg-musician' class="grey-text text-darken-1"></span><br>
-                        <span id='lg-version' class="hide-on-small-and-down grey-text text-darken-1"></span><span id='lg-release' class="hide-on-small-and-down grey-text text-darken-1"></span><span id='lg-genre' class="hide-on-small-and-down grey-text text-darken-1"></span> <span id='lg-current' class="hide-on-small-and-down grey-text text-darken-1"></span><span id='lg-remaining' class="hide-on-small-and-down grey-text text-darken-1"></span><span id='lg-total' class="hide-on-small-and-down grey-text text-darken-1"></span> <span id='lg-duration' class="hide-on-small-and-down grey-text text-darken-1"></span>
+                        <span id='lg-version' class="hide-on-small-and-down grey-text text-darken-1"></span><span id='lg-date' class="hide-on-small-and-down grey-text text-darken-1"></span><span id='lg-genre' class="hide-on-small-and-down grey-text text-darken-1"></span> <span id='lg-current' class="hide-on-small-and-down grey-text text-darken-1"></span><span id='lg-remaining' class="hide-on-small-and-down grey-text text-darken-1"></span><span id='lg-total' class="hide-on-small-and-down grey-text text-darken-1"></span> <span id='lg-duration' class="hide-on-small-and-down grey-text text-darken-1"></span>
                     </div>
                 </div>
             </div>

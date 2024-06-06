@@ -14,7 +14,7 @@ $subtotal = null;
 
 $session = $_POST['session'];
 
-$query = "SELECT * FROM cart JOIN item ON cart.itemID LIKE item.catalog INNER JOIN genre ON item.genreID LIKE genre.id WHERE cart.accountSession LIKE '$session'";
+$query = "SELECT * FROM cart JOIN item ON cart.itemCatalog LIKE item.catalog INNER JOIN genre ON item.genreID LIKE genre.id WHERE cart.accountSession LIKE '$session'";
 $result = mysqli_query($link, $query);
 
 if($result)
