@@ -66,6 +66,7 @@ function invoicing($reference, $email, $grandtotal, $content, $date, $link)
                 <html>
                     <head>
                         <meta charset='UTF-8'>
+                        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
                         <style>
                             body{
                                 font-family: SEGOE UI;
@@ -97,13 +98,18 @@ function invoicing($reference, $email, $grandtotal, $content, $date, $link)
                                         <tr><td></td><td></td><td></td><td></td><td style='vertical-align: middle; text-align: right; font-size: 12;'>VAT charged at 16% R</td></tr>
                                         <tr><td></td><td></td><td></td><td style='text-align: right; font-size: 12;'>TOTAL</td><td style='vertical-align: middle; text-align: right;'><b>R$grandtotal</b></td></tr>
                                     </table>
-                                </tr>
-                                <tr>
-                                    <td><br>If you have any questions contact us at <a href='mailto:info@atonalrecords.co.za'>info@atonalrecords.co.za</a></br></td>
-                                </tr>
-                                <tr>
-                                    <td><br><br>Thank you,<br>Atonal Records</td>
-                                </tr>
+                                </tr><br><br><br>
+                                <table width='100%'>
+                                    <tr>
+                                        <td style='text-align: center; font-size: 12;'>If you didn't make this purchase or if you believe an unauthoried person is attempting to access your account, please report it.</td>
+                                    </tr>
+                                    <tr>
+                                        <td align='center'><img src='http://localhost/atonalrecords/images/site/trademark.png' alt='logo'></td>
+                                    </tr>
+                                    <tr>
+                                        <td style='text-align: center; font-size: 12;'>Copyright &copy; 2024 Symphony. All rights reserved.</td>
+                                    </tr>
+                                </table>
                             </table>
                         <div>
                     </body>
