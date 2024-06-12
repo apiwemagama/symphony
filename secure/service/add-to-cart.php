@@ -20,7 +20,7 @@ if(isset($_SESSION['session']))
         }
         else
         {
-            $query = "INSERT INTO cart(accountSession, itemCatalog) SELECT '$session', catalog FROM item WHERE catalog LIKE '$itemCatalog'";
+            $query = "INSERT INTO cart(accountSession, itemCatalog, UPC) SELECT '$session', catalog, UPC FROM item WHERE catalog LIKE '$itemCatalog'";
             $result = mysqli_query($link,$query);
 
             if($result)

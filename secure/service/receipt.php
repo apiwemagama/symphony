@@ -18,7 +18,7 @@ $result = mysqli_query($link, $query);
 
 if($result)
 {
-    $query = "INSERT INTO library(receiptReference, accountSession, itemCatalog) SELECT '$reference', accountSession, itemCatalog FROM cart WHERE accountSession LIKE '$session'";
+    $query = "INSERT INTO library(receiptReference, accountSession, itemCatalog, UPC) SELECT '$reference', accountSession, itemCatalog, UPC FROM cart WHERE accountSession LIKE '$session'";
     $result = mysqli_query($link, $query);
     
     if($result)

@@ -365,12 +365,11 @@
         <group>
             <file>file:/C:/xampp/htdocs/atonalrecords/js/app.js</file>
             <file>file:/C:/xampp/htdocs/atonalrecords/www/app.php</file>
-            <file>file:/C:/xampp/htdocs/atonalrecords/secure/service/invoicing.bat</file>
+            <file>file:/C:/xampp/htdocs/atonalrecords/secure/service/add-to-cart.php</file>
+            <file>file:/C:/xampp/htdocs/atonalrecords/secure/content/library.php</file>
             <file>file:/C:/xampp/htdocs/atonalrecords/secure/service/receipt.php</file>
+            <file>file:/C:/xampp/htdocs/atonalrecords/secure/service/library.php</file>
             <file>file:/C:/xampp/htdocs/atonalrecords/secure/content/cart.php</file>
-            <file>file:/C:/xampp/htdocs/atonalrecords/secure/service/cart.php</file>
-            <file>file:/C:/xampp/htdocs/atonalrecords/secure/service/update.php</file>
-            <file>file:/C:/xampp/htdocs/atonalrecords/secure/service/invoicing.php</file>
         </group>
     </open-files>
 </project-private>

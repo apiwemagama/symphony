@@ -457,6 +457,5 @@ and open the template in the editor.
                 $('.collapsible').collapsible();
             });
         </script>
-        
     </body>
 </html>
