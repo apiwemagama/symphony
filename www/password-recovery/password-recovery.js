@@ -15,7 +15,7 @@ $(document).ready(function() {
             },
             messages: {
                 emailToRecoverPassword: {
-                    required: "Please fill out this field."
+                    required: "Please fill out this fiel."
                 }
             },
             errorElement: 'span',
@@ -34,16 +34,12 @@ $(document).ready(function() {
                 var btnresetpassword = $('#btn-reset-password').val();
 
                 $.ajax({
-                    async: true,
-                    cache: false,
-                    contentType: 'application/x-www-form-urlencoded; charset-UTF-8',
-                    crossDomain: true,
                     method: 'POST',
-                    url: '../secure/service/password-recovery.php',
+                    url: '../secure/service/password-recovery',
                     data: {email: email},
-                    beforeSend: function(){
-                        btnresetpassword.html("<i class='fa fa-spinner fa-spin'></i>");
-                    },
+//                    beforeSend: function(){
+//                        btnresetpassword.html("<i class='fa fa-spinner fa-spin'></i>");
+//                    },
                     success: function(result){
                         if(result === "mail-sent-success")
                         {
@@ -61,10 +57,10 @@ $(document).ready(function() {
                         {
                             M.toast({html: 'Account with this email does not exist. Please create one.', classes: 'orange'});
                         }
-                    },
-                    complete: function(){
-                        btnresetpassword.html("Reset");
                     }
+//                    complete: function(){
+//                        btnresetpassword.html("Reset");
+//                    }
                 });
             }
         });

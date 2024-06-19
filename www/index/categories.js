@@ -4,10 +4,10 @@
  * and open the template in the editor.
  */
 
-function categories() {
+$(document).ready(function() {
     $.ajax({
         method: 'GET',
-        url: '/atonalrecords/www/service/shop-by-genre',
+        url: 'service/shop-by-genre',
         dataType: 'JSON',
         success: function(data){
             $.each(JSON.parse(JSON.stringify(data)), function(key, value){    
@@ -17,7 +17,7 @@ function categories() {
     });
     $.ajax({
         method: 'GET',
-        url: '/atonalrecords/www/service/whats-new',
+        url: 'service/whats-new',
         dataType: 'JSON',
         success: function(data){
             $.each(JSON.parse(JSON.stringify(data)), function(key, value){    
@@ -25,4 +25,4 @@ function categories() {
             });
         }
     });
-}
+});

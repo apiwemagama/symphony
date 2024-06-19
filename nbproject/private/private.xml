@@ -363,13 +363,12 @@
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/atonalrecords/js/app.js</file>
+            <file>file:/C:/xampp/htdocs/atonalrecords/www/app.js</file>
             <file>file:/C:/xampp/htdocs/atonalrecords/www/app.php</file>
-            <file>file:/C:/xampp/htdocs/atonalrecords/secure/service/add-to-cart.php</file>
-            <file>file:/C:/xampp/htdocs/atonalrecords/secure/content/library.php</file>
-            <file>file:/C:/xampp/htdocs/atonalrecords/secure/service/receipt.php</file>
-            <file>file:/C:/xampp/htdocs/atonalrecords/secure/service/library.php</file>
-            <file>file:/C:/xampp/htdocs/atonalrecords/secure/content/cart.php</file>
+            <file>file:/C:/xampp/htdocs/atonalrecords/secure/service/password-recovery.php</file>
+            <file>file:/C:/xampp/htdocs/atonalrecords/www/password-recovery/password-recovery.js</file>
+            <file>file:/C:/xampp/htdocs/atonalrecords/www/password-recovery/password-recovery.php</file>
+            <file>file:/C:/xampp/htdocs/atonalrecords/secure/service/invoicing.php</file>
         </group>
     </open-files>
 </project-private>

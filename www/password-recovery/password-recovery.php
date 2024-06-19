@@ -9,7 +9,7 @@
         <div class="row">
             <div class="col s12 l5">
                 <div class="input-field"><input type="email" id="emailToRecoverPassword" name="emailToRecoverPassword" data-error=".emailToRecoverPassword"><label for="emailToRecoverPassword">Email</label><span class="helper-text emailToRecoverPassword"></span></div>
-                <div class="input-field"><button type="submit" class="btn btn-reset-password btn-round waves-effect waves-light grey submit" id="btn-reset-password" name="btn-reset-password">RESET</button></div>
+                <div class="input-field"><button class="btn btn-reset-password btn-round waves-effect waves-light grey submit" id="btn-reset-password" name="btn-reset-password">RESET</button></div>
             </div>
         </div>
     </form>
@@ -133,4 +133,5 @@
       ?>
     </div>
 </div>
+<script src="password-recovery/password-recovery.js"></script>
         

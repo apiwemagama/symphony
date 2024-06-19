@@ -7,7 +7,7 @@
 //App script
 $(document).ready(function() {
     _session();
-    categories();
+//    categories();
     
     //Explore content
     var index = $(".content").html();
@@ -26,7 +26,7 @@ $(document).ready(function() {
     });
     //About content
     $(document).on("click", ".about.waves-effect.waves-light", function(e){
-        e.preventDefault();
+//        e.preventDefault();
         
         window.history.pushState('','','#!/about');
 
@@ -34,7 +34,7 @@ $(document).ready(function() {
     });
     //Suport content
     $(document).on("click", ".support.waves-effect.waves-light", function(e){
-        e.preventDefault();
+//        e.preventDefault();
         
         window.history.pushState('','','#!/support');
 
@@ -42,25 +42,25 @@ $(document).ready(function() {
     });
     //Registration content
     $('.modal, .content').on("click", ".register, .btn-sign-up-now",function(e){
-        e.preventDefault();
+//        e.preventDefault();
         
         window.history.pushState('','','#!/register');
         
         $(document).prop('title', 'Register :: Atonal Records');
         
-        $('.content').load('../secure/content/register');
-        
         $('#modal-default-authorization, #modal-bottom-sheet-authorization').modal('close');
     });
     //Account content
     $(document).on("click", "#dropdown-content-li-account, .account", function(e){
-        e.preventDefault();
+//        e.preventDefault();
         
         window.history.pushState('','','#!/account');
+        
+        
     });
     //Cart content
     $(document).on("click", ".cart", function(e){
-        e.preventDefault();
+//        e.preventDefault();
         
         window.history.pushState('','','#!/cart');
 
@@ -70,7 +70,7 @@ $(document).ready(function() {
     });
     //Library content
     $(document).on("click", ".library", function(e){
-        e.preventDefault();
+//        e.preventDefault();
         
         window.history.pushState('','','#!/library');
 
@@ -78,7 +78,7 @@ $(document).ready(function() {
     });
     //Shop by genre content
     $(document).on("click", ".card.shop-by-genre-category", function(e){
-        e.preventDefault();
+//        e.preventDefault();
 
         var style = $(this).attr("data-item-style");
         var category = $(this).attr("data-item-category");
@@ -99,7 +99,7 @@ $(document).ready(function() {
     });
 
     $(".content").on("click", ".card.whats-new-category, .card.genre", function(e){
-        e.preventDefault();
+//        e.preventDefault();
 
         var musician = $(this).attr("data-item-musician");
 //        var title = $(this).attr("data-item-title");
@@ -141,11 +141,11 @@ $(document).ready(function() {
 //    });
 
     $('.modal').on("click", ".password-recovery", function(e){
-        e.preventDefault();
+//        e.preventDefault();
 
         window.history.pushState('','','#!/password-recovery');
 
-        $('.content').load('../secure/content/password-recovery');
+//        $('.content').load('../secure/content/password-recovery');
         $(document).prop('title', 'Password Recovery :: Atonal Records');
         $('#modal-default-authorization, #modal-bottom-sheet-authorization').modal('close');
     });
@@ -157,7 +157,7 @@ $(document).ready(function() {
                 var urlParams = new URLSearchParams(url.split('?')[1]);
                 var bo = urlParams.get('bo');
                 var co = urlParams.get('co');
-                $('.content').load('content/release', 
+                $('.content').load('release/release', 
                     function(){
                         $.ajax({
                             method: 'GET',
@@ -215,8 +215,6 @@ $(document).ready(function() {
                     }
                 );
                 
-                
-
                 $(document).prop('title', co + ' by ' + bo + ' :: Atonal Records');
             };
         } else if (url.startsWith('#!/genre')) {
@@ -224,7 +222,7 @@ $(document).ready(function() {
                 var urlParams = new URLSearchParams(url.split('?')[1]);
                 var style = urlParams.get('style');
                 var category = urlParams.get('category');
-                $('.content').load('content/genre', {
+                $('.content').load('genre/genre', {
                     style: style,
                     category: category
                 });
@@ -240,20 +238,22 @@ $(document).ready(function() {
         
         var hash = {
             '#!/index': function(){
-                revertBack();
-                categories();
+//                revertBack();
+//                categories();
+                $('.content').load('index/index');
             },
             '#!/about': function(){
-                $('.content').load('content/about');
+                $('.content').load('about/about');
             },
             '#!/support': function(){
-                $('.content').load('content/support');
+                $('.content').load('support/support');
             },
             '#!/account': function(){
+                
                 if(sessionStorage.getItem('session') !== null)
                 {
-                    $('.content').load('../secure/content/account');
-                    $(document).prop('title', 'Account :: Atonal Records');
+                    $('.content').load('account/account');
+                  
                 }
                 else
                 {
@@ -263,7 +263,7 @@ $(document).ready(function() {
             '#!/cart': function(){
                 if(sessionStorage.getItem('session') !== null)
                 {
-                    $('.content').load('../secure/content/cart',{
+                    $('.content').load('cart/cart',{
                         session: sessionStorage.getItem('session')
                     });
                 }
@@ -275,7 +275,7 @@ $(document).ready(function() {
             '#!/library': function(){
                 if(sessionStorage.getItem('session') !== null)
                 {
-                    $('.content').load('../secure/content/library',{
+                    $('.content').load('library/library',{
                         session: sessionStorage.getItem('session')
                     });
                 }
@@ -284,7 +284,14 @@ $(document).ready(function() {
                     $('.content').html("<div class='container grey-text'><div class='row no-padding-bottom'><div class='col'><h3>Haven\'t purchased none</h3></div></div><div class='row'><div class='col'>Shop now. Play Forever.</div></div> <div class='row'><div class='col'><a class='btn btn-round grey'>Log in to your account</a></div><div class='col'><a class='btn-sign-up-now btn btn-round grey'>Sign up now</a></div></div></div>");
                 }
             },
+            '#!/register': function(){
+                $('.content').load('register/register');
+            },
+            '#!/password-recovery': function(){
+                $('.content').load('password-recovery/password-recovery');
+            },
             'default': function(){
+                console.log("Hello");
             }
         };
         // Get dynamic hash function

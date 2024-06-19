@@ -23,7 +23,7 @@ and open the template in the editor.
                         <div class="display-table-row vertical-align-middle w-100 h-100 border-bottom-1px-solid-whitesmoke" data-menu-option="security">
                             <p class="menu-option-padding font-weight-bold">SECURITY</p>
                         </div>
-                        <div class="display-table-row vertical-align-middle w-100 h-100 border-bottom-1px-solid-whitesmoke" data-menu-option="pref">
+                        <div class="display-table-row vertical-align-middle w-100 h-100 border-bottom-1px-solid-whitesmoke" data-menu-option="preferences">
                             <p class="menu-option-padding font-weight-bold">PREFERENCES</p>
                         </div>
                     </div>
@@ -35,7 +35,7 @@ and open the template in the editor.
         </main>
     </body>
     <script>
-        $('#regular').load('../secure/content/profile.php');
+        $('#regular').load('./profile/profile.php');
 
         $(".col .card div").click(function(e){
             e.preventDefault();
@@ -44,19 +44,19 @@ and open the template in the editor.
 
             if(menuOption === 'profile')
             {
-                $('#regular').load('../secure/content/profile.php');
+                $('#regular').load('profile/profile.php');
             }
             else if(menuOption === 'update')
             {
-                $('#regular').load('../secure/content/update.php');
+                $('#regular').load('update/update.php');
             }
             else if(menuOption === 'security')
             {
-                $('#regular').load('../secure/content/security.php');
+                $('#regular').load('security/security.php');
             }
-            else if(menuOption === 'pref')
+            else if(menuOption === 'preferences')
             {
-                $('#regular').load('../secure/content/preferences.php');
+                $('#regular').load('preferences/preferences.php');
             }
         });
     </script>

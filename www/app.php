@@ -78,7 +78,7 @@ and open the template in the editor.
                             <div class="row">
                                 <div class="col l6">
                                     <div class="input-field">
-                                        <input type="email" id="email" name="email" data-error=".email">
+                                        <input type="email" id="email" name="email" data-error=".email" autocomplete="email">
                                         <label for="email">Email</label>
                                         <span class="helper-text email"></span>
                                     </div>
@@ -255,16 +255,7 @@ and open the template in the editor.
         </ul>
         <main>
             <div class="content">
-                <div class="container grey-text">
-                    <h3>Shop by Genre</h3>
-                    <div class="row shop-by-genre">  
-                    </div>
-                    <h3>Whats new</h3>
-                    <div class="row whats-new">
-                    </div>
-                    <h3>Featured</h3>
-                    <p>No featured recordings yet.</p>
-                </div>
+                
             </div>
         </main>
         <footer class="page-footer grey white-text">
@@ -430,22 +421,25 @@ and open the template in the editor.
             </div>
             <div id="footer" class="footer-copyright">
                 <div class="container center-align white-text">
-                    &copy; <span id="year"></span> Atonal Records. All Rights Reserved.
+                    Copyright &copy; <span id="year"></span> Atonal Records. All Rights Reserved.
                 </div>
             </div>
         </footer>
-        <script src="script/webplayer.js"></script>
-        <script src="../js/app.js"></script>
-        <script src="../secure/script/categories.js"></script>
+        
+        
+        <script src="app.js"></script>
+        
         <script src="../secure/script/session-storage.js"></script>
-        <script src="../secure/script/register.js"></script>
+        
         <script src="../secure/script/login.js"></script>
+        
         <script src="../secure/script/add-to-cart.js"></script>
         <script src="../secure/script/count-from-cart.js"></script>
         <script src="../secure/script/remove-from-cart.js"></script>
         <script src="../secure/script/logout.js"></script>
-        <script src="../secure/script/password-recovery.js"></script>
+
         <script src="../js/year.js"></script>
+        <script src="script/webplayer.js"></script>
         <script> 
             $(document).ready(function() {
                 $('.sidenav').sidenav();
