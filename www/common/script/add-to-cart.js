@@ -5,9 +5,7 @@
  */
 
 $(document).ready(function() {
-    $(document).on("click", ".btn-add-to-cart", function(e){
-        e.preventDefault();
-
+    $(document).on("click", ".btn-add-to-cart", function(){
         var session = sessionStorage.getItem('session');
 
         var itemCatalog = $(this).attr("data-catalog");
@@ -15,7 +13,7 @@ $(document).ready(function() {
         var itemTitle = $(this).attr("data-title");
         var itemMusician = $(this).attr("data-musician");
         
-        console.log(itemCatalog+" "+session);
+        console.log(itemCatalog+" "+session+" "+itemCatalog);
         
         if(session !== null)
         {

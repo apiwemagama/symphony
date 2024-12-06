@@ -425,21 +425,16 @@ and open the template in the editor.
                 </div>
             </div>
         </footer>
-        
-        
         <script src="app.js"></script>
-        
         <script src="../secure/script/session-storage.js"></script>
-        
         <script src="../secure/script/login.js"></script>
-        
-        <script src="../secure/script/add-to-cart.js"></script>
+        <script src="common/script/add-to-cart.js"></script>
+        <script src="common/script/remove-from-cart.js"></script>
         <script src="../secure/script/count-from-cart.js"></script>
-        <script src="../secure/script/remove-from-cart.js"></script>
+        
         <script src="../secure/script/logout.js"></script>
-
         <script src="../js/year.js"></script>
-        <script src="script/webplayer.js"></script>
+        <script src="../js/webplayer.js"></script>
         <script> 
             $(document).ready(function() {
                 $('.sidenav').sidenav();

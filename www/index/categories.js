@@ -7,7 +7,7 @@
 $(document).ready(function() {
     $.ajax({
         method: 'GET',
-        url: 'service/shop-by-genre',
+        url: '../secure/service/shop-by-genre',
         dataType: 'JSON',
         success: function(data){
             $.each(JSON.parse(JSON.stringify(data)), function(key, value){    
@@ -17,7 +17,7 @@ $(document).ready(function() {
     });
     $.ajax({
         method: 'GET',
-        url: 'service/whats-new',
+        url: '../secure/service/whats-new',
         dataType: 'JSON',
         success: function(data){
             $.each(JSON.parse(JSON.stringify(data)), function(key, value){    

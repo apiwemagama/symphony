@@ -112,6 +112,10 @@ blockquote{border-color: rgba(245,245,245,1);}
 /*change the minimum height of the authorization modal for small screens*/
 .modal.bottom-sheet.authorization{min-height: 80% !important; border-radius: 20px 20px 0 0;}
 
+.input-field input:focus+label, .materialize-textarea:focus:not([readonly])+label{color: lightgray !important;}
+.input-field input:focus, .materialize-textarea:focus:not([readonly]){border-bottom: 1px solid lightgray !important; box-shadow: 0 1px 0 0 lightgray !important;}
+.fa-exclamation-triangle {font-size: 14px !important;}          
+
 @media screen and (max-width: 480px)
 {
     /*change size of toast image on small screens*/

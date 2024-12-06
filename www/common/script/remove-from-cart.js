@@ -6,9 +6,7 @@
 
 
 $(document).ready(function() {
-    $(document).on("click", ".btn-remove-from-cart", function(e){
-        e.preventDefault();
-
+    $(document).on("click", ".btn-remove-from-cart", function(){
         var session = sessionStorage.getItem('session');
         var itemCatalog = $(this).attr("data-item-catalog");
 
@@ -27,7 +25,7 @@ $(document).ready(function() {
                         session: sessionStorage.getItem('session')
                     });
                     
-                    $('.content').load('../secure/content/cart',{
+                    $('.content').load('cart/cart',{
                         session: sessionStorage.getItem('session')
                     });
                 }
